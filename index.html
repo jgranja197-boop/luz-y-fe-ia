@@ -4,10 +4,229 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luz y Fe IA</title>
+  <meta name="theme-color" content="#10100f">
+  <title>Luz y Fe IA | Inspira tu fe</title>
+  <style>
+    :root {
+      --fondo: #10100f;
+      --panel: #191815;
+      --dorado: #d8b568;
+      --texto: #f7f2e8;
+      --suave: #b8b1a3;
+      --borde: #393326;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--fondo);
+      color: var(--texto);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px;
+      border-bottom: 1px solid var(--borde);
+      background: #141310;
+    }
+
+    .barra {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .marca {
+      color: var(--dorado);
+      font-size: 21px;
+      font-weight: bold;
+      letter-spacing: .4px;
+    }
+
+    .etiqueta {
+      color: var(--suave);
+      font-size: 12px;
+    }
+
+    main {
+      width: min(100% - 32px, 900px);
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 36px 18px;
+      border: 1px solid var(--borde);
+      border-radius: 22px;
+      background: radial-gradient(ellipse at top, #302719 0%, #191815 48%, #141310 100%);
+    }
+
+    .simbolo {
+      font-size: 42px;
+      color: var(--dorado);
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1.15;
+      margin: 0 0 16px;
+    }
+
+    h1 span { color: var(--dorado); }
+
+    .introduccion {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      color: var(--suave);
+      font-size: 16px;
+    }
+
+    .boton {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 10px;
+      background: var(--dorado);
+      color: #17130b;
+      font-weight: bold;
+      text-decoration: none;
+      border: 0;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .boton-secundario {
+      background: transparent;
+      border: 1px solid var(--dorado);
+      color: var(--dorado);
+    }
+
+    .seccion-titulo {
+      margin: 38px 0 8px;
+      font-size: 24px;
+    }
+
+    .descripcion-seccion {
+      color: var(--suave);
+      margin-top: 0;
+    }
+
+    .tarjetas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .tarjeta {
+      padding: 22px;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      background: var(--panel);
+    }
+
+    .icono {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    h3 { margin: 0 0 8px; color: var(--dorado); }
+    .tarjeta p { margin: 0; color: var(--suave); font-size: 14px; }
+
+    .estado {
+      margin-top: 24px;
+      padding: 16px;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      color: var(--suave);
+      font-size: 13px;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--borde);
+      padding: 24px 16px;
+      color: var(--suave);
+      font-size: 12px;
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 16px; }
+      main { padding: 28px 0; }
+      .hero { padding: 30px 16px; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Luz y Fe IA</h1>
-  <p>Tu espacio para crear imágenes cristianas.</p>
+  <header>
+    <div class="barra">
+      <div>
+        <div class="marca">✦ Luz y Fe IA</div>
+        <div class="etiqueta">Inspiración cristiana con inteligencia artificial</div>
+      </div>
+      <span aria-label="Fe y esperanza">✧ ✝ ✧</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="simbolo">✦</div>
+      <h1>Comparte la luz de Dios <span>cada día</span></h1>
+      <p class="introduccion">
+        Un espacio para preparar contenido cristiano inspirador,
+        compartir la Palabra y llevar mensajes de esperanza a más personas.
+      </p>
+      <a class="boton" href="#herramientas">Explorar herramientas</a>
+    </section>
+
+    <section id="herramientas">
+      <h2 class="seccion-titulo">Tu espacio de creación</h2>
+      <p class="descripcion-seccion">
+        Herramientas para organizar tus ideas y preparar publicaciones de fe.
+      </p>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <div class="icono">🎨</div>
+          <h3>Imágenes cristianas</h3>
+          <p>Prepara ideas para imágenes con mensajes de fe, amor y esperanza.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">📖</div>
+          <h3>Versículos bíblicos</h3>
+          <p>Organiza pasajes de la Biblia para acompañar tus publicaciones.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">✨</div>
+          <h3>Frases inspiradoras</h3>
+          <p>Crea mensajes positivos para compartir la fe cada día.</p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="icono">📅</div>
+          <h3>Planificación</h3>
+          <p>Prepara tu contenido con anticipación y organiza tus próximas publicaciones.</p>
+        </article>
+      </div>
+
+      <div class="estado">
+        <strong style="color: var(--dorado);">Próximamente:</strong>
+        generación de imágenes con IA, creación automática de descripciones y hashtags,
+        y conexión oficial con tu página de Facebook. Estas funciones aún no están activadas.
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Luz y Fe IA · Contenido para inspirar, compartir y fortalecer la fe.
+  </footer>
 </body>
 </html>
