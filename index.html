@@ -3,37 +3,37 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#10100f">
-  <title>Luz y Fe IA | Inspira tu fe</title>
+  <title>Luz y Fe IA | Creador cristiano</title>
   <style>
     :root {
-      --fondo: #10100f;
-      --panel: #191815;
-      --dorado: #d8b568;
-      --texto: #f7f2e8;
-      --suave: #b8b1a3;
-      --borde: #393326;
+      --bg: #10100f;
+      --panel: #1b1915;
+      --gold: #dfbd76;
+      --text: #fff9ed;
+      --muted: #c1b8a6;
+      --border: #443925;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      background: var(--fondo);
-      color: var(--texto);
-      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
       line-height: 1.6;
     }
 
     header {
-      padding: 20px;
-      border-bottom: 1px solid var(--borde);
-      background: #141310;
+      padding: 18px;
+      border-bottom: 1px solid var(--border);
+      background: #151410;
     }
 
-    .barra {
-      max-width: 1000px;
+    .nav {
+      max-width: 900px;
       margin: auto;
       display: flex;
       align-items: center;
@@ -41,192 +41,297 @@
       gap: 12px;
     }
 
-    .marca {
-      color: var(--dorado);
+    .brand {
+      color: var(--gold);
       font-size: 21px;
       font-weight: bold;
-      letter-spacing: .4px;
     }
 
-    .etiqueta {
-      color: var(--suave);
+    .tagline {
       font-size: 12px;
+      color: var(--muted);
     }
 
     main {
-      width: min(100% - 32px, 900px);
-      margin: 0 auto;
-      padding: 48px 0;
+      max-width: 900px;
+      margin: auto;
+      padding: 28px 16px 48px;
     }
 
     .hero {
       text-align: center;
-      padding: 36px 18px;
-      border: 1px solid var(--borde);
-      border-radius: 22px;
-      background: radial-gradient(ellipse at top, #302719 0%, #191815 48%, #141310 100%);
+      padding: 30px 16px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: radial-gradient(ellipse at top, #382d1b, #1b1915 65%);
     }
 
-    .simbolo {
-      font-size: 42px;
-      color: var(--dorado);
-      margin-bottom: 8px;
-    }
+    .star { font-size: 38px; color: var(--gold); }
 
     h1 {
-      font-size: clamp(30px, 7vw, 48px);
-      line-height: 1.15;
-      margin: 0 0 16px;
+      font-size: clamp(30px, 7vw, 44px);
+      line-height: 1.2;
+      margin: 8px 0 12px;
     }
 
-    h1 span { color: var(--dorado); }
+    h1 span, h2, h3 { color: var(--gold); }
 
-    .introduccion {
-      max-width: 600px;
-      margin: 0 auto 24px;
-      color: var(--suave);
-      font-size: 16px;
-    }
+    .muted { color: var(--muted); }
 
-    .boton {
-      display: inline-block;
-      padding: 12px 20px;
-      border-radius: 10px;
-      background: var(--dorado);
-      color: #17130b;
-      font-weight: bold;
-      text-decoration: none;
-      border: 0;
-      cursor: pointer;
-      font-size: 15px;
-    }
-
-    .boton-secundario {
-      background: transparent;
-      border: 1px solid var(--dorado);
-      color: var(--dorado);
-    }
-
-    .seccion-titulo {
-      margin: 38px 0 8px;
-      font-size: 24px;
-    }
-
-    .descripcion-seccion {
-      color: var(--suave);
-      margin-top: 0;
-    }
-
-    .tarjetas {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
-      margin-top: 22px;
-    }
-
-    .tarjeta {
+    .panel {
+      margin-top: 24px;
       padding: 22px;
-      border: 1px solid var(--borde);
-      border-radius: 16px;
+      border: 1px solid var(--border);
+      border-radius: 18px;
       background: var(--panel);
     }
 
-    .icono {
-      font-size: 28px;
-      margin-bottom: 8px;
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 17px 0 7px;
     }
 
-    h3 { margin: 0 0 8px; color: var(--dorado); }
-    .tarjeta p { margin: 0; color: var(--suave); font-size: 14px; }
+    textarea, select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #594a31;
+      border-radius: 10px;
+      background: #11100e;
+      color: var(--text);
+      font: inherit;
+    }
 
-    .estado {
-      margin-top: 24px;
+    textarea { min-height: 115px; resize: vertical; }
+
+    .button {
+      display: inline-block;
+      width: 100%;
+      margin-top: 18px;
+      padding: 14px;
+      border: 0;
+      border-radius: 10px;
+      background: var(--gold);
+      color: #19140b;
+      font-weight: bold;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .secondary {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    .result {
+      display: none;
+      margin-top: 20px;
       padding: 16px;
-      border: 1px solid var(--borde);
       border-radius: 12px;
-      color: var(--suave);
-      font-size: 13px;
+      border: 1px solid var(--border);
+      background: #11100e;
+      overflow-wrap: anywhere;
+    }
+
+    #promptResult { white-space: pre-wrap; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .card {
+      padding: 18px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
     }
 
     footer {
       text-align: center;
-      border-top: 1px solid var(--borde);
       padding: 24px 16px;
-      color: var(--suave);
+      border-top: 1px solid var(--border);
+      color: var(--muted);
       font-size: 12px;
-    }
-
-    @media (max-width: 480px) {
-      header { padding: 16px; }
-      main { padding: 28px 0; }
-      .hero { padding: 30px 16px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="barra">
+    <div class="nav">
       <div>
-        <div class="marca">✦ Luz y Fe IA</div>
-        <div class="etiqueta">Inspiración cristiana con inteligencia artificial</div>
+        <div class="brand">✦ Luz y Fe IA</div>
+        <div class="tagline">Inspiración cristiana, creada con propósito</div>
       </div>
-      <span aria-label="Fe y esperanza">✧ ✝ ✧</span>
+      <span aria-label="Símbolo de fe">✧ ✝</span>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="simbolo">✦</div>
-      <h1>Comparte la luz de Dios <span>cada día</span></h1>
-      <p class="introduccion">
-        Un espacio para preparar contenido cristiano inspirador,
-        compartir la Palabra y llevar mensajes de esperanza a más personas.
+      <div class="star">✦</div>
+      <h1>Imágenes que inspiran <span>la fe</span></h1>
+      <p class="muted">
+        Prepara ideas visuales cristianas para compartir esperanza,
+        amor y la Palabra de Dios.
       </p>
-      <a class="boton" href="#herramientas">Explorar herramientas</a>
     </section>
 
-    <section id="herramientas">
-      <h2 class="seccion-titulo">Tu espacio de creación</h2>
-      <p class="descripcion-seccion">
-        Herramientas para organizar tus ideas y preparar publicaciones de fe.
+    <section class="panel">
+      <h2>🎨 Creador de imágenes cristianas</h2>
+      <p class="muted">
+        Describe tu idea, elige una escena y prepara las instrucciones
+        para un generador de imágenes con inteligencia artificial.
       </p>
 
-      <div class="tarjetas">
-        <article class="tarjeta">
-          <div class="icono">🎨</div>
-          <h3>Imágenes cristianas</h3>
-          <p>Prepara ideas para imágenes con mensajes de fe, amor y esperanza.</p>
-        </article>
+      <form id="imageForm">
+        <label for="scene">¿Qué imagen quieres crear?</label>
+        <select id="scene">
+          <option value="Jesús orando en una montaña al amanecer">
+            Jesús orando
+          </option>
+          <option value="Jesús acompañando y consolando a una familia">
+            Jesús y la familia
+          </option>
+          <option value="Una persona arrodillada en oración">
+            Persona orando
+          </option>
+          <option value="Una escena bíblica en tiempos antiguos">
+            Escena bíblica
+          </option>
+          <option value="Un majestuoso paisaje celestial con nubes luminosas">
+            Paisaje celestial
+          </option>
+          <option value="Un padre orando por la protección de sus hijos">
+            Oración por los hijos
+          </option>
+        </select>
 
-        <article class="tarjeta">
-          <div class="icono">📖</div>
-          <h3>Versículos bíblicos</h3>
-          <p>Organiza pasajes de la Biblia para acompañar tus publicaciones.</p>
-        </article>
+        <label for="style">Estilo visual</label>
+        <select id="style">
+          <option value="cinematográfico hiperrealista, calidad 4K">
+            Cinematográfico hiperrealista 4K
+          </option>
+          <option value="pintura religiosa clásica sobre lienzo">
+            Pintura clásica sobre lienzo
+          </option>
+          <option value="arte digital celestial, luz dorada y atmósfera espiritual">
+            Arte celestial dorado
+          </option>
+          <option value="fotografía realista, luz natural y emoción profunda">
+            Fotografía realista
+          </option>
+        </select>
 
-        <article class="tarjeta">
-          <div class="icono">✨</div>
-          <h3>Frases inspiradoras</h3>
-          <p>Crea mensajes positivos para compartir la fe cada día.</p>
-        </article>
+        <label for="format">Formato de la imagen</label>
+        <select id="format">
+          <option value="vertical 9:16 para historias y Reels">
+            Vertical 9:16 — Reels
+          </option>
+          <option value="horizontal 16:9 para YouTube">
+            Horizontal 16:9 — YouTube
+          </option>
+          <option value="cuadrado 1:1 para publicaciones">
+            Cuadrado 1:1 — Facebook
+          </option>
+        </select>
 
-        <article class="tarjeta">
-          <div class="icono">📅</div>
-          <h3>Planificación</h3>
-          <p>Prepara tu contenido con anticipación y organiza tus próximas publicaciones.</p>
-        </article>
-      </div>
+        <label for="details">Detalles adicionales (opcional)</label>
+        <textarea id="details" placeholder="Ejemplo: rayos dorados, montañas al fondo, expresión de paz, sin texto en la imagen..."></textarea>
 
-      <div class="estado">
-        <strong style="color: var(--dorado);">Próximamente:</strong>
-        generación de imágenes con IA, creación automática de descripciones y hashtags,
-        y conexión oficial con tu página de Facebook. Estas funciones aún no están activadas.
+        <button class="button" type="submit">
+          ✨ Preparar mi prompt
+        </button>
+      </form>
+
+      <div class="result" id="result" aria-live="polite">
+        <h3>Tu prompt está listo</h3>
+        <p class="muted">
+          Copia estas instrucciones y pégalas en un generador de imágenes
+          con IA para crear tu imagen.
+        </p>
+        <div id="promptResult"></div>
+        <button class="button" id="copyButton" type="button">
+          Copiar prompt
+        </button>
+        <p class="muted" id="copyStatus"></p>
       </div>
     </section>
+
+    <section>
+      <h2>Tu espacio creativo</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>📖 Versículos bíblicos</h3>
+          <p class="muted">Prepara ideas para acompañar tus imágenes con la Palabra.</p>
+        </article>
+        <article class="card">
+          <h3>🙏 Mensajes de fe</h3>
+          <p class="muted">Inspira a otras personas con mensajes de esperanza y oración.</p>
+        </article>
+        <article class="card">
+          <h3>📅 Próximamente</h3>
+          <p class="muted">Conexión con generación de imágenes real y herramientas de publicación.</p>
+        </article>
+      </div>
+    </section>
+
+    <p class="muted" style="font-size:13px; margin-top:22px">
+      Nota: este formulario prepara el texto de la imagen; todavía no genera
+      imágenes directamente. La generación real requiere conectar un servicio de IA.
+    </p>
   </main>
 
   <footer>
-    Luz y Fe IA · Contenido para inspirar, compartir y fortalecer la fe.
+    Luz y Fe IA · Comparte esperanza, inspira corazones.
   </footer>
+
+  <script>
+    const form = document.getElementById("imageForm");
+    const result = document.getElementById("result");
+    const promptResult = document.getElementById("promptResult");
+    const copyButton = document.getElementById("copyButton");
+    const copyStatus = document.getElementById("copyStatus");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const scene = document.getElementById("scene").value;
+      const style = document.getElementById("style").value;
+      const format = document.getElementById("format").value;
+      const details = document.getElementById("details").value.trim();
+
+      let prompt = "Crea una imagen cristiana de " + scene + ". ";
+      prompt += "Estilo visual: " + style + ". ";
+      prompt += "Formato: " + format + ". ";
+      if (details) prompt += "Detalles adicionales: " + details + ". ";
+      prompt += "Composición profesional, iluminación cuidada, gran riqueza de detalles, atmósfera emotiva y respetuosa. No incluir letras ni marcas de agua, salvo que se solicite.";
+
+      promptResult.textContent = prompt;
+      result.style.display = "block";
+      copyStatus.textContent = "";
+      result.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    copyButton.addEventListener("click", async function() {
+      const text = promptResult.textContent;
+
+      try {
+        await navigator.clipboard.writeText(text);
+        copyStatus.textContent = "¡Prompt copiado! Ya puedes pegarlo en tu generador de imágenes.";
+      } catch (error) {
+        const selection = window.getSelection();
+        const range = document.createRange();
+        range.selectNodeContents(promptResult);
+        selection.removeAllRanges();
+        selection.addRange(range);
+        copyStatus.textContent = "Mantén pulsado el texto seleccionado y elige Copiar.";
+      }
+    });
+  </script>
 </body>
 </html>
